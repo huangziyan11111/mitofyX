@@ -40,11 +40,11 @@ options
 ```
 
 ## List of changes
-  - It is now possible to use your own sequence database (built with formatdb) with mitofyX. Please see the new option `--rna_db` and `--gene_db` since several genes were missed during annotation of some green algae mitochondrial genome.
-  - You can now use a any output directory. See `--outdir`
+  - It is now possible to use your own sequence database (built with formatdb) with mitofyX. Please see the new options `--rna_db` and `--gene_db`. This was added since several genes were missed during annotation of some green algae mitochondrial genomes.
+  - You can now specify the output directory. See `--outdir`
   - The __blast__ and __tRNAscan-SE__ binaries provided with mitofy were removed, as they were not always compatible with the os. They should be installed before __mitofy__ now.
   - Link to the gene summary and rna summary file were added in each summary file
-  - Manual annotation in browser does not require to set up a webserver with apache anymore. Instead a simple server using CGIHTTPServer is python is used know.  To start the server, please run the script `start_server.py` in the main folder. You should use the same port you used when running __mitofyX__. By default the port is set to 8000
+  - Manual annotation in browser does not require to set up a webserver with apache anymore. Instead a simple server using CGIHTTPServer is python is used know.  To start the server, please run the script `start_server.py` in the main folder. You should use the same port you used when running __mitofyX__. By default the port is set to 8000
   - Manual annotations are saved in the "annotated/$project"
 
 ## To do
