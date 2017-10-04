@@ -1,0 +1,7 @@
+>Feature NW_014013625.1
+38485	38404	gene
+			gene	trnL-TAG
+			note	anticodon:TAG
+38485	38404	tRNA
+			gene	trnL-TAG
+			product	tRNA-Leu
