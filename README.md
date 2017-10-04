@@ -1,8 +1,8 @@
-# mitofyX
+## mitofyX
 mitofyX is a fork of mitofy (Alverson et al. 2010), a plant mitochondrial annotation tool written in perl. 
 The purpose of this fork is to simplify the installation of mitofy and maybe add some functionalities.
 
-# [mitofy](http://dogma.ccbb.utexas.edu/mitofy/)
+## [Original mitofy](http://dogma.ccbb.utexas.edu/mitofy/)
 
 The original source code and documentation of mitofy can be found here ==> http://dogma.ccbb.utexas.edu/mitofy/. [The original documentation](http://dogma.ccbb.utexas.edu/mitofy/README.pdf) is still relevant and all changes in the software usage are listed here. 
 
@@ -21,7 +21,7 @@ If you use mitofy/mitofyX, please remember to cite the original publication:
     eprint = {/oup/backfile/content_public/journal/mbe/27/6/10.1093_molbev_msq029/2/msq029.pdf}
     }
 
-# Usage 
+## Usage 
 ```
 usage:./mitofyX.pl [options] genome.fasta projectID
       projectID = unique project name; all output files with have this prefix
@@ -39,10 +39,16 @@ options
       --port      - Port to listen to for manual annotation in browser using a cgi-server. Only set it if it really necessary (default: 8000)
 ```
 
-# List of changes
-  - It is now possible to use your own sequence database (built with formatdb) with mitofyX. Please see the new option `--rna_db` and `--gene_db`
+## List of changes
+  - It is now possible to use your own sequence database (built with formatdb) with mitofyX. Please see the new option `--rna_db` and `--gene_db` since several genes were missed during annotation of some green algae mitochondrial genome.
   - You can now use a any output directory. See `--outdir`
   - The __blast__ and __tRNAscan-SE__ binaries provided with mitofy were removed, as they were not always compatible with the os. They should be installed before __mitofy__ now.
   - Link to the gene summary and rna summary file were added in each summary file
   - Manual annotation in browser does not require to set up a webserver with apache anymore. Instead a simple server using CGIHTTPServer is python is used know.  To start the server, please run the script `start_server.py` in the main folder. You should use the same port you used when running __mitofyX__. By default the port is set to 8000
   - Manual annotations are saved in the "annotated/$project"
+
+## To do
+  - Remove all unused argument in mitofy 
+  - Either Dump blast for tRNA search and use it only for other ncRNA search + maybe another tool Or make tRNAScan-SE and blast output more consistent
+  
+  
