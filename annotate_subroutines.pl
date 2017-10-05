@@ -377,7 +377,7 @@ sub print_output_header{
 		"}\n";
 
   print HTML "</style>\n";
-  print HTML "<body onLoad=\"window.open(\'http:\/\/127.0.0.1:$port\/cgi\/make_annotation_form.cgi?gene_name=$gene&taxon=$query_taxon&project=$project\',\'mywindow\',\'width=550,height=680,resizable=yes,menubar=no,screenX=0,screenY=0\')\">\n";
+  print HTML "<body>\n"#onLoad=\"window.open(\'http:\/\/127.0.0.1:$port\/cgi\/make_annotation_form.cgi?gene_name=$gene&taxon=$query_taxon&project=$project\',\'mywindow\',\'width=550,height=680,resizable=yes,menubar=no,screenX=0,screenY=0\')\">\n";
 
   # @$gene_lengths_ref = sort {$a <=> $b}( @$gene_lengths_ref);
   # my $gl = join( ',&nbsp;', @$gene_lengths_ref);
