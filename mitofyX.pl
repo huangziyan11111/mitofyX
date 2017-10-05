@@ -20,7 +20,7 @@ our $RNA_MINLEN  = 30;
 our $OUTDIR = "";
 our $GENEDB = "";
 our $RNADB = "";
-our $BUILDB;
+our $BUILDB = 0;
 our $port = 8000;
 
 parseArgs();
@@ -126,8 +126,8 @@ foreach $gene ( @glist ){
 
   #run BLAST for current gene
   if( $gene eq "nad5_ex3" ){
-    if(! -e "$mt_genes/$gene/formatdb.log" || $BUILDB){
-         system("formatdb  -l $mt_genes/$gene/formatdb.log -t $gene -i $mt_genes/$gene/$gene -p F")
+    unless ((-e "$mt_genes/$gene/formatdb.log") && !($BUILDB)){
+         system("formatdb  -l $mt_genes/$gene/formatdb.log -t $gene -i $mt_genes/$gene/$gene -p F");
     }
     # open( BLASTRUN, "blastall -p blastn -d $mt_genes/$gene/$gene -i $infile | " );
     open( BLASTRUN, "blastn -word_size 9 -reward 2 -penalty -3 -gapopen 5 -gapextend 2 -query $infile -db $mt_genes/$gene/$gene  | " );
@@ -146,8 +146,8 @@ foreach $gene ( @glist ){
 
   }else{ #all other protein genes
     # rebuild database if necessary
-    if(! -e "$mt_genes/$gene/formatdb.log" || $BUILDB){
-         system("formatdb  -l $mt_genes/$gene/formatdb.log -t $gene -i $mt_genes/$gene/$gene -p T")
+    unless ((-e "$mt_genes/$gene/formatdb.log") && !($BUILDB)){
+        system("formatdb  -l $mt_genes/$gene/formatdb.log -t $gene -i $mt_genes/$gene/$gene -p T");
     }
     # open( BLASTRUN, "blastall -F F -e 50 -p blastx -d $/mt_genes/$gene/$gene -i $infile | " );
     open( BLASTRUN, "blastx -query $infile -db  $mt_genes/$gene/$gene  | " );

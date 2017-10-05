@@ -1,27 +1,6 @@
 
-========================[ Jan 30, 2009 12:25 PM ]========================
-Version 2.2.18 [Mar-02-2008]
-Started database file "nad5_ex3.fasta"
+========================[ Oct 5, 2017  2:51 PM ]========================
+Version 2.2.26 [Sep-21-2011]
+Started database file "blast_dbs/mt_genes/nad5_ex3/nad5_ex3"
 Formatted 1 sequences in volume 0
-SUCCESS: formatted database nad5_ex3
-
-========================[ Jan 30, 2009 12:26 PM ]========================
-Version 2.2.18 [Mar-02-2008]
-Started database file "nad5_ex3.fasta"
-Formatted 1 sequences in volume 0
-SUCCESS: formatted database nad5_ex3
-
-========================[ Jan 30, 2009  2:32 PM ]========================
-Version 2.2.18 [Mar-02-2008]
-Started database file "nad5_ex3"
-Formatted 1 sequences in volume 0
-SUCCESS: formatted database nad5_ex3
-
-========================[ May 25, 2011  4:26 PM ]========================
-ERROR: [000.000] No database name was specified
-
-========================[ May 25, 2011  4:26 PM ]========================
-Version 2.2.18 [Mar-02-2008]
-Started database file "nad5_ex3"
-Formatted 1 sequences in volume 0
-SUCCESS: formatted database nad5_ex3
+SUCCESS: formatted database blast_dbs/mt_genes/nad5_ex3/nad5_ex3
