@@ -49,6 +49,6 @@ options
 
 ## To do
   - Remove all unused argument in mitofy 
-  - Either Dump blast for tRNA search and use it only for other ncRNA search + maybe another tool Or make tRNAScan-SE and blast output more consistent
+  - Either Dump blast for tRNA search and use it only for other ncRNA search + maybe another tool Or make tRNAScan-SE and blast output more consistent (put all possible tRNA sequence for a specific amino acid in the same folder, with a consistent seqID)
   
   
