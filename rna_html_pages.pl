@@ -169,7 +169,7 @@ sub print_rna_summary{
   my( $query_taxon, $project, $seqlen, $rna_html_files, $rna_blast_files, $tscan_html_files_Href, $out_directory, $missed_by_blast_Aref, $missed_Aref, $all_found_Aref, $trna_frames_Href, $tscan_html_paths ) = @_;
   my $gene;
   my $output_file = "$out_directory" . "/" . "$project" . "_rna_summary.html";
-  my $gene_output_file =  "../" . "$project" . "_summary.html";
+  my $gene_output_file =  "$project" . "_summary.html";
   my $n_missed_rows = @{$missed_Aref};
   my $frame;
   

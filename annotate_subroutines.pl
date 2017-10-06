@@ -413,7 +413,7 @@ sub print_output_footer{
     my( $project, $query_taxon, $seqlen, $html_files, $blast_files, $out_directory, $missed_ref ) = @_;
     my $gene;
     my $output_file = ">". "$out_directory" . "/" . "$project" . "_summary.html";
-    my $rna_output_file = "../" . "$project" . "_rna_summary.html";
+    my $rna_output_file = "$project" . "_rna_summary.html";
     my $n_missed_rows = @{$missed_ref};
     
     
